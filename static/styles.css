@@ -1,0 +1,130 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and background */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+/* Container for the content */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 450px;
+    width: 100%;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #4c51bf;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input[type="text"] {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #cbd5e0;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #4c51bf;
+}
+
+button {
+    background-color: #4c51bf;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #434190;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* Error message */
+.error-message {
+    color: #e53e3e;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Shortened URL container */
+.short-url-container {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #edf2f7;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.short-url-container a {
+    color: #4c51bf;
+    word-break: break-word;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.short-url-container a:hover {
+    text-decoration: underline;
+}
+
+/* Copy button */
+button[onclick="copyToClipboard()"] {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #48bb78;
+    transition: all 0.3s ease;
+}
+
+button[onclick="copyToClipboard()"]:hover {
+    background-color: #38a169;
+    transform: translateY(-2px);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input[type="text"], button {
+        font-size: 1rem;
+    }
+}
