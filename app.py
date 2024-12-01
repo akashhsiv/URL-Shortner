@@ -9,13 +9,6 @@ app = Flask(__name__)
 app.secret_key = "your_secret_key"
 shortened_urls = {}
 
-# Load URLs from JSON at startup
-if os.path.exists("urls.json"):
-    with open("urls.json", "r") as file:
-        shortened_urls = json.load(file)
-else:
-    with open("urls.json", "w") as file:
-        json.dump({}, file)
 
 
 def generate_short_url(length=6):
@@ -38,9 +31,7 @@ def index():
 
         shortened_urls[short_url] = long_url
 
-        # Save to JSON file
-        with open("urls.json", "w") as file:
-            json.dump(shortened_urls, file)
+        
 
     return render_template("index.html", short_url=short_url)
 
