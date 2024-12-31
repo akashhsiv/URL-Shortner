@@ -1,3 +1,15 @@
+:root {
+    --primary: #DBD56E;   /* Primary color */
+    --secondary: #FFE9F3; /* Secondary color */
+    --accent: #9ABCA7;    /* Accent color */
+    --background: #2A2A2A; /* Dark Background */
+    --text-color: #E6E6E6; /* Light Text Color */
+    --button-bg: #4C4C4C;  /* Dark Button */
+    --button-hover: #6B6B6B; /* Hover Button */
+    --button-active: #333333; /* Active Button */
+  }
+
+
 /* Reset some basic styles */
 * {
     margin: 0;
@@ -8,17 +20,17 @@
 /* Body and background */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--background);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: white;
+    color: var(--text-color);
 }
 
 /* Container for the content */
 .container {
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--secondary);
     border-radius: 15px;
     padding: 2rem;
     max-width: 450px;
@@ -31,7 +43,7 @@ h1 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: #4c51bf;
+    color: var(--accent);
 }
 
 /* Form styling */
@@ -45,18 +57,20 @@ input[type="text"] {
     padding: 0.75rem;
     font-size: 1rem;
     border-radius: 8px;
-    border: 1px solid #cbd5e0;
+    border: 1px solid var(--accent);
     outline: none;
     transition: all 0.3s ease;
+    background: var(--button-bg);
+    color: var(--text-color);
 }
 
 input[type="text"]:focus {
-    border-color: #4c51bf;
+    border-color: var(--primary);
 }
 
 button {
-    background-color: #4c51bf;
-    color: white;
+    background-color: var(--button-bg);
+    color: var(--text-color);
     border: none;
     padding: 0.75rem;
     font-size: 1rem;
@@ -67,14 +81,18 @@ button {
 }
 
 button:hover {
-    background-color: #434190;
+    background-color: var(--button-hover);
     transform: translateY(-2px);
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
+button:active {
+    background-color: var(--button-active);
+}
+
 /* Error message */
 .error-message {
-    color: #e53e3e;
+    color: var(--primary);
     font-size: 0.9rem;
     margin-top: 1rem;
     text-align: center;
@@ -84,13 +102,13 @@ button:hover {
 .short-url-container {
     margin-top: 2rem;
     padding: 1rem;
-    background-color: #edf2f7;
+    background-color: var(--accent);
     border-radius: 10px;
     text-align: center;
 }
 
 .short-url-container a {
-    color: #4c51bf;
+    color: var(--primary);
     word-break: break-word;
     font-size: 1.1rem;
     text-decoration: none;
@@ -104,12 +122,12 @@ button:hover {
 button[onclick="copyToClipboard()"] {
     margin-top: 1rem;
     padding: 0.6rem 1.2rem;
-    background-color: #48bb78;
+    background-color: var(--primary);
     transition: all 0.3s ease;
 }
 
 button[onclick="copyToClipboard()"]:hover {
-    background-color: #38a169;
+    background-color: var(--button-hover);
     transform: translateY(-2px);
 }
 
