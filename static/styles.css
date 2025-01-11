@@ -1,12 +1,13 @@
 :root {
     --primary: #F1EFEF;   /* Soft Off-White */
-    --secondary: #CCC8AA; /* Muted Beige */
+    --secondary: #264653; /* Muted Beige */
     --accent: #7D7C7C;    /* Medium Gray */
-    --background: #191717; /* Deep Charcoal Background */
-    --text-color: #F1EFEF; /* Light Text Color */
-    --button-bg: #7D7C7C;  /* Medium Gray Button */
-    --button-hover: #4C4C4C; /* Darker Hover Button */
-    --button-active: #333333; /* Active Button */
+    --background: #333C4A; /* Deep Charcoal Background */
+    --text-color: #080854; /* Light Text Color */
+    --button-bg: #d7c2c2;  /* Medium Gray Button */
+    --button-hover: #473232; /* Darker Hover Button */
+    --button-active: #883e3e; /* Active Button */
+    --bg:#222e3a;
 }
 
 /* Reset some basic styles */
@@ -19,7 +20,6 @@
 /* Body and background */
 body {
     font-family: 'Arial', sans-serif;
-    background: var(--background);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +59,7 @@ input[type="text"] {
     border: 1px solid var(--accent);
     outline: none;
     transition: all 0.3s ease;
-    background: var(--button-bg);
+    background: var(--bg);
     color: var(--text-color);
 }
 
@@ -144,4 +144,20 @@ button[onclick="copyToClipboard()"]:hover {
     input[type="text"], button {
         font-size: 1rem;
     }
+.text-input {
+    color: #030303;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.submit-button {
+    color: white;
+    background-color: #007bff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
 }
