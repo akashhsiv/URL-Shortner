@@ -1,14 +1,13 @@
 :root {
-    --primary: #DBD56E;   /* Primary color */
-    --secondary: #FFE9F3; /* Secondary color */
-    --accent: #9ABCA7;    /* Accent color */
-    --background: #2A2A2A; /* Dark Background */
-    --text-color: #E6E6E6; /* Light Text Color */
-    --button-bg: #4C4C4C;  /* Dark Button */
-    --button-hover: #6B6B6B; /* Hover Button */
+    --primary: #F1EFEF;   /* Soft Off-White */
+    --secondary: #CCC8AA; /* Muted Beige */
+    --accent: #7D7C7C;    /* Medium Gray */
+    --background: #191717; /* Deep Charcoal Background */
+    --text-color: #F1EFEF; /* Light Text Color */
+    --button-bg: #7D7C7C;  /* Medium Gray Button */
+    --button-hover: #4C4C4C; /* Darker Hover Button */
     --button-active: #333333; /* Active Button */
-  }
-
+}
 
 /* Reset some basic styles */
 * {
@@ -43,7 +42,7 @@ h1 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: var(--accent);
+    color: var(--primary);
 }
 
 /* Form styling */
